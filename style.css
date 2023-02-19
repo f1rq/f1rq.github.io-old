@@ -1,0 +1,141 @@
+body{
+    background-color: #171717;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;  
+}
+
+@keyframes appear{
+0% {
+    opacity: 0;
+    transform: translateX(-100px) translateY(-100);
+}
+100% {
+    opacity: 1;
+    transform: translateX(-100) translateY(-200px);
+}
+
+
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+h2{
+    color: rgb(124, 124, 124);
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    color: white;
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+h4{
+    color: white;
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+}
+
+h5{
+    color: rgb(124, 124, 124);
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+}
+
+
+
+p{
+    color: white;
+    margin: 0;
+    text-align: left;
+}
+
+a{
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+a:hover{
+    color: #00b894;
+}
+
+#srodek{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: appear 3s .5 both;
+}
+
+#gorapanel{
+    text-align: right;
+    margin-right: 40px;
+}
+
+.pcs1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: appear 3s .5 both;
+    display: inline;
+    display: flex;
+}
+
+li{
+    text-align: left;
+    list-style: none;
+    color: white;
+}
+
+summary {
+    color: white;
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+    display: block;
+    left: 20px;
+    position: relative;
+}
+
+summary:before {
+    content: '';
+    border: 10px solid;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    left: -20px;
+    top: 12px;
+    transition: all .4s;
+}
+
+
+summary:hover {
+    cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
+  }
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+
+
+       
+  
