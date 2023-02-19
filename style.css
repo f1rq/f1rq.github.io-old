@@ -54,14 +54,18 @@ h5{
 }
 
 
-
 p{
     color: white;
     margin: 0;
     text-align: left;
 }
 
-a{
+#gorapanel{
+    text-align: right;
+    margin-right: 4.223864836325237vh;
+}
+
+#gorapanel a{
     color: white;
     font-size: 2.1119324181626187vh;
     font-family: 'Roboto', sans-serif;
@@ -69,7 +73,7 @@ a{
     transition: color .2s ease-in-out;
 }
 
-a:hover{
+#gorapanel a:hover{
     color: #00b894;
 }
 
@@ -80,11 +84,6 @@ a:hover{
     transform: translate(-50%, -50%);
     text-align: center;
     animation: appear 3s .5 both;
-}
-
-#gorapanel{
-    text-align: right;
-    margin-right: 4.223864836325237vh;
 }
 
 a + a {
@@ -149,4 +148,35 @@ details summary::-webkit-details-marker {
  
 details[open] summary ~ * {
     animation: open .5s ease-in-out;
+}
+
+#findme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 93.5vh;
+    position: relative;
+    animation: appear 3s .5 both;
+    display: inline;
+    display: flex;
+    font-size: 2vh;
+}
+
+#findme p {
+    color: white;
+    font-size: 3.167898627243928vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#findme a{
+    color: white;
+    font-size: 3.167898627243928vh;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+#findme a:hover{
+    color: #00b894;
 }
