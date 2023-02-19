@@ -1,5 +1,5 @@
 body{
-    background-color: #171717;
+    background-image:linear-gradient(90deg, #292929, #0a0a0a);
     color: white;
     font-family: 'Titillium Web', sans-serif;
     padding-top: 2.1119324181626187vh;  
@@ -92,7 +92,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 90vh;
+    min-height: 93.5vh;
     position: relative;
     animation: appear 3s .5 both;
     display: inline;
