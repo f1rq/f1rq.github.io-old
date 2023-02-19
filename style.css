@@ -2,7 +2,7 @@ body{
     background-color: #171717;
     color: white;
     font-family: 'Titillium Web', sans-serif;
-    padding-top: 20px;  
+    padding-top: 2.1119324181626187vh;  
 }
 
 @keyframes appear{
@@ -20,14 +20,14 @@ body{
 
 h1{
     color: white;
-    font-size: 50px;
+    font-size: 5.279831045406547vh;
     margin: 0;
 }
 
 h2{
     color: rgb(124, 124, 124);
     margin: 0;
-    font-size: 30px;
+    font-size: 3.167898627243928vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
@@ -35,21 +35,21 @@ h2{
 h3{
     color: white;
     margin: 0;
-    font-size: 30px;
+    font-size: 3.167898627243928vh;
     text-align: center;
 }
 
 h4{
     color: white;
     margin: 0;
-    font-size: 30px;
+    font-size: 3.167898627243928vh;
     text-align: left;
 }
 
 h5{
     color: rgb(124, 124, 124);
     margin: 0;
-    font-size: 30px;
+    font-size: 3.167898627243928vh;
     text-align: left;
 }
 
@@ -63,7 +63,7 @@ p{
 
 a{
     color: white;
-    font-size: 20px;
+    font-size: 2.1119324181626187vh;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     transition: color .2s ease-in-out;
@@ -84,7 +84,7 @@ a:hover{
 
 #gorapanel{
     text-align: right;
-    margin-right: 40px;
+    margin-right: 4.223864836325237vh;
 }
 
 .pcs1{
@@ -107,10 +107,10 @@ li{
 summary {
     color: white;
     margin: 0;
-    font-size: 30px;
+    font-size: 3.167898627243928vh;
     text-align: left;
     display: block;
-    left: 20px;
+    left: 2.1119324181626187vh;
     position: relative;
 }
 
@@ -119,8 +119,8 @@ summary:before {
     border: 10px solid;
     border-color: transparent transparent transparent white;
     position: absolute;
-    left: -20px;
-    top: 12px;
+    left: -2.1119324181626187vh;
+    top: 1.2671594508975712vh;
     transition: all .4s;
 }
 
