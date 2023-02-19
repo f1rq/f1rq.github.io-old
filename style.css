@@ -87,6 +87,10 @@ a:hover{
     margin-right: 4.223864836325237vh;
 }
 
+a + a {
+    margin-left: .8vh;
+}
+
 .pcs1{
     display: flex;
     justify-content: center;
