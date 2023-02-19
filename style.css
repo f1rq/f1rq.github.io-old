@@ -8,11 +8,11 @@ body{
 @keyframes appear{
 0% {
     opacity: 0;
-    transform: translateX(-100px) translateY(-100);
+    transform: translateX(-10.559662090813093vh) translateY(-100);
 }
 100% {
     opacity: 1;
-    transform: translateX(-100) translateY(-200px);
+    transform: translateX(-100) translateY(-21.119324181626187vh);
 }
 
 
@@ -116,7 +116,7 @@ summary {
 
 summary:before {
     content: '';
-    border: 10px solid;
+    border: 1.0559662090813093vh solid;
     border-color: transparent transparent transparent white;
     position: absolute;
     left: -2.1119324181626187vh;
