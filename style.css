@@ -88,14 +88,16 @@ a:hover{
 }
 
 .pcs1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    min-height: 90vh;
+    position: relative;
     animation: appear 3s .5 both;
     display: inline;
     display: flex;
+    font-size: 2vh;
 }
 
 li{
@@ -136,6 +138,11 @@ details summary::-webkit-details-marker {
     transform: rotate(90deg);
   }
 
-
-       
-  
+@keyframes open {
+    0% {opacity: 0; margin-left: -20px}
+    100% {opacity: 1; margin-left: 0px}
+}
+ 
+details[open] summary ~ * {
+    animation: open .5s ease-in-out;
+}
