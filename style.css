@@ -53,6 +53,15 @@ h5{
     text-align: left;
 }
 
+h6{
+    color: white;
+    margin: 0;
+    font-size: 2.1119324181626187vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
 
 p{
     color: white;
@@ -74,7 +83,7 @@ p{
 }
 
 #gorapanel a:hover{
-    color: #00b894;
+    color: #225dff;
 }
 
 #srodek{
@@ -177,6 +186,21 @@ details[open] summary ~ * {
     transition: color .2s ease-in-out;
 }
 
-#findme a:hover{
-    color: #00b894;
+#findme a:hover {
+    color: #225dff;
+}
+
+#findme p:hover {
+    color: #225dff;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+}
+
+.box {
+    position: relative;
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
