@@ -152,8 +152,8 @@ details summary::-webkit-details-marker {
   }
 
 @keyframes open {
-    0% {opacity: 0; margin-left: -20px}
-    100% {opacity: 1; margin-left: 0px}
+    0% {opacity: 0; margin-left: -2.1119324181626187vh;}
+    100% {opacity: 1; margin-left: 0vh}
 }
  
 details[open] summary ~ * {
@@ -204,8 +204,8 @@ details[open] summary ~ * {
 
 .bottom {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0vh;
+    left: 0vh;
 }
 
 .copyalert{
