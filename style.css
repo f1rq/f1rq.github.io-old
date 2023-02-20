@@ -59,6 +59,7 @@ h6{
     font-size: 2.1119324181626187vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
 
@@ -164,7 +165,7 @@ details[open] summary ~ * {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 93.5vh;
+    min-height: 88.5vh;
     position: relative;
     animation: appear 3s .5 both;
     display: inline;
@@ -198,9 +199,20 @@ details[open] summary ~ * {
 
 .box {
     position: relative;
+    background-color: white; 
 }
+
 .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.copyalert{
+    color: white;
+    font-size: 3.167898627243928vh;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 6vh;
+    margin-bottom: 3vh;
+    background-color: white;
 }

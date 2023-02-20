@@ -17,9 +17,6 @@ document.querySelectorAll('details').forEach(d =>
 
 
 
-
-
-
 function copy(that){
   var inp =document.createElement('input');
   document.body.appendChild(inp)
@@ -27,8 +24,10 @@ function copy(that){
   inp.select();
   document.execCommand('copy',false);
   inp.remove();
-  /** WORK IN PROGRESS
   document.getElementById("alert").innerHTML = "Copied the text.";
+  setTimeout(() => {
+    document.getElementById("alert").innerHTML = "";  
+    // code here
+    },3000)
+}
   
-  document.getElementById("alert").innerHTML = "";  */
-  }
