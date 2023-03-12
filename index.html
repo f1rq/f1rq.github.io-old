@@ -33,6 +33,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#findme">Find me</a>
             </li>
+            <!--
+            <li class="nav-item">
+                <a class="nav-link" href="#archguide">Arch Linux install guide</a>
+            </li>
+            -->
             </ul>
           </div>
         </div>
@@ -153,8 +158,125 @@
             </div>
         </div>
     </section>
-    
-
+    <!-- 
+    <section id="archguide" class="full-height px-lg-5">
+        <div class="container">
+            <div class="row pb-r" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <h6 class="text-brand">Arch Linux install guide</h6>
+                    <h1>How to install Arch Linux</h1><br>
+                </div>
+                    <code style="font-size:2vh;font-weight:bold;">WARNING: This guide is only for UEFI machines. If you have legacy machine DO NOT USE THIS GUIDE!</code>
+                    <p class="stti p-4">1. Download Arch Linux .iso file</p>
+                    <p>To download .iso file, you need to go <a href="https://archlinux.org/download/" class="aghc">here</a>.</p> 
+                    <p>Scroll down, until you see your country and choose any server. For me, it will be Poland.</p>
+                    <img src="./assets/images/downloadingiso.png" style="width:250px;height:auto;"><br>
+                    <p class="stti p-4">2. Flash .iso on your pendrive.</p>
+                    <p>Now, once you have downloaded your .iso you need to flash it on pendrive. To do this, visit official Rufus website. You can find it <a href="https://rufus.ie/en/" class="aghc">here</a>.</p>
+                    <p>Download Rufus .exe file and run it. Choose pendrive on what to put .iso [1]. Choose your .iso to flash [2]. Click START to start flashing [3].</p>
+                    <img src="./assets/images/rufus1.png" style="width:400px;height:auto;"><p></p>
+                    <p>When asked about "ISOHybrid" image, check ISO image and click OK.</p>
+                    <img src="./assets/images/rufus2.png" style="width:500px;height:auto;"><p></p>
+                    <p>When asked about Syslinux, click Yes.</p>
+                    <img src="./assets/images/rufus3.png" style="width:450px;height:auto;"><p></p>
+                    <p>Rufus will ask about pendrive format. If you are sure, click OK.</p>
+                    <img src="./assets/images/rufus4.png" style="width:450px;height:auto;"><p></p>
+                    <p class="stti p-4">3. Boot Arch Linux installer.</p>
+                    <p>After you flashed .iso file on pendrive, you need to boot it. To do this you want open boot menu while booting pc.</p>
+                    <p>Most used keys for this are:</p>
+                    <ul>
+                        <li>Delete</li>
+                        <li>F12</li>
+                        <li>F1</li>
+                        <li>Esc</li>
+                    </ul>
+                    <p>If you are inside your boot menu, choose name of your pendrive.</p>
+                    <p class="stti p-4">4. Partition disks</p>
+                    <p>This is what you should see when arch installer succefuly booted.</p>
+                    <img src="./assets/images/arch1.png" style="width:900px;height:auto;"><p></p>
+                    <p>First, enter <code class="cmd">cfdisk</code> to enter disk partition utility and choose gpt label type.</p>
+                    <img src="./assets/images/arch2.png" style="width:900px;height:auto;"><p></p>
+                    <p>Click New to make new partition</p>
+                    <img src="./assets/images/arch3.png" style="width:900px;height:auto;"><p></p>
+                    <p>Type 500m and hit enter.</p>
+                    <img src="./assets/images/arch4.png" style="width:900px;height:auto;"><p></p>
+                    <p>Select Type function.</p>
+                    <img src="./assets/images/arch6.png" style="width:900px;height:auto;"><p></p>
+                    <p>Select EFI System.</p>
+                    <img src="./assets/images/arch5.png" style="width:900px;height:auto;"><p></p>
+                    <p>This will be our EFI partition for bootloader.</p>
+                    <p>Now, let's create swap partiton. Swap size will be our ram size. For example, I have 4gb of ram, so my swap will be 4gb.</p>
+                    <p>For creating swap partition, repeat the same procces but instead of typing 500m, type for example 4gb where 4 is your amount of ram.</p>
+                    <p>Click type and select Linux swap</p>
+                    <img src="./assets/images/arch8.png" style="width:900px;height:auto;"><p></p>
+                    <p>Now we have 2 partition. The rest of space left will be our partition with system.</p>
+                    <img src="./assets/images/arch7.png" style="width:900px;height:auto;"><p></p>
+                    <p>Click on New, and hit enter for a second time. This will create partition with rest space left.</p>
+                    <img src="./assets/images/arch9.png" style="width:900px;height:auto;"><p></p>
+                    <p>Now select Write and type yes.</p>
+                    <img src="./assets/images/arch10.png" style="width:900px;height:auto;"><p></p>
+                    <p>Quit cfdisk.</p>
+                    <img src="./assets/images/arch11.png" style="width:900px;height:auto;"><p></p>
+                    <p>You can check if all partitions are created. To do this simply enter <code class="cmd">fdisk -l</code></p>
+                    <img src="./assets/images/arch12.png" style="width:900px;height:auto;"><p></p>
+                    <p class="stti p-4">5. Create file systems.</p>
+                    <p>Now, when partitions are created, we need to create file systems on them. To do this you will need enter 3 commands.</p>
+                    <p>First, <code class="cmd">mkfs.fat -F32 /dev/sda1</code></p>
+                    <p>Second, <code class="cmd">mkswap /dev/sda2</code></p>
+                    <p>And last, <code class="cmd">mkfs.ext4 /dev/sda3</code></p>
+                    <img src="./assets/images/arch13.png" style="width:900px;height:auto;"><p></p>
+                    <p class="stti p-4">6. Mount file systems</p>
+                    <p>File systems are created, time to mount them.</p>
+                    <p><code class="cmd">mount /dev/sda3 /mnt</code></p>
+                    <p><code class="cmd">swapon /dev/sda2</code></p>
+                    <img src="./assets/images/arch14.png" style="width:900px;height:auto;"><p></p>
+                    <p class="stti p-4">7. Install Arch Linux system.</p>
+                    <p>So we made partitions accesible and now we can install system.</p>
+                    <p><code class="cmd">pacstrap /mnt base base-devel linux linux-firmware vim</code></p>
+                    <img src="./assets/images/arch15.png" style="width:900px;height:auto;"><p></p>
+                    <p>Now just wait until download ends.</p>
+                    <img src="./assets/images/arch16.png" style="width:900px;height:auto;"><p></p>
+                    <p class="stti p-4">8. Generate fstab</p>
+                    <p>After the installations completes, we need configure system.</p>
+                    <p>Firstly we want generate fstab file. To do this simply enter:</p>
+                    <p><code class="cmd">genfstab -U -p /mnt >> /mnt/etc/fstab</code></p>
+                    <p>You can check if it properly generated by using cat command.</p>
+                    <p><code class="cmd">cat /mnt/etc/fstab</code></p>
+                    <img src="./assets/images/arch17.png" style="width:900px;height:auto;"><p></p>
+                    <p class="stti p-4">9. Configure Arch Linux system.</p>
+                    <p>In order to further configure Arch Linux, you must chroot into /mnt the system path and add a hostname for your system by issuing the below commands.</p>
+                    <p><code class="cmd">arch-chroot /mnt</code></p>
+                    <p><code class="cmd">echo "hostname" > /etc/hostname</code> where "hostname" is your hostname. E.g "arch", "mypc", "laptop", "box" or literally anything.</p>
+                    <p>Now, choose your system language by uncommenting locale in /etc/locale.gen.</p>
+                    <p><code class="cmd">pacman -S vim</code></p>
+                    <p><code class="cmd">vim /etc/locale.gen</code></p>
+                    <img src="./assets/images/arch18.png" style="width:900px;height:auto;"><p></p>
+                    <p>Now press <code class="cmd">i</code> and uncomment something like:</p>
+                    <p><code class="cmd">en_US.UTF-8 UTF-8</code></p>
+                    <img src="./assets/images/arch19.png" style="width:900px;height:auto;"><p></p>
+                    <p>To save&exit press <code class="cmd">Esc</code>and write <code class="cmd">:wq</code></p>
+                    <p>After that we need to generate locale.conf by executing these commands:</p>
+                    <p><code class="cmd">locale-gen</code></p>
+                    <p><code class="cmd">echo LANG=en_US.UTF-8 > /etc/locale.conf</code></p>
+                    <p><code class="cmd">export LANG=en_US.UTF-8</code></p>
+                    <img src="./assets/images/arch20.png" style="width:900px;height:auto;"><p></p>
+                    <p>The next step will be configuring system time zone by creating a symlink for your sub time zone to /etc/localtime file path.</p>
+                    <p><code class="cmd">ls /usr/share/zoneinfo</code> to show all timezones. For me it will be CET so i need to execute:</p>
+                    <p><code class="cmd">ln -s /usr/share/zoneinfo/CET /etc/localtime</code></p>
+                    <img src="./assets/images/arch21.png" style="width:900px;height:auto;"><p></p>
+                    <p>Like many famous Linux distributions, Arch Linux uses repo mirrors for different world locations and multiple system architectures. The standard repositories are enabled by default, but if you want to activate Multilib repositories you must uncomment [multilib] directives from /etc/pacman.conf file, as shown in the below excerpt.</p>
+                    <p><code class="cmd">vim /etc/pacman.conf</code></p>
+                    <img src="./assets/images/arch22.png" style="width:900px;height:auto;"><p></p>
+                    <p>After the repository file has been edited, synchronize and update database mirrors and packages by running the below command.</p>
+                    <p><code class="cmd">pacman -Syu</code></p>
+                    <img src="./assets/images/arch23.png" style="width:900px;height:auto;"><p></p>
+                    <p>Now we need to setup root account password and create user (with his password ofc)</p>
+                    <p><code class="cmd">passwd</code> to set root password.</p>
+                    <p><code class="cmd">useradd -mg users -G wheel,storage,power -s /bin/bash username</code> to create user where username is name of user.</p>
+            </div>
+        </div>
+    </section>
+ -->
     
      
     

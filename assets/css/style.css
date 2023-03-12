@@ -125,3 +125,19 @@ img {
 .contactcopydiv {
     cursor: pointer;
 }
+
+.stti {
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.aghc {
+    color: rgb(0, 0, 0);
+}
+
+.cmd {
+    background-color: rgb(73, 73, 73);
+    color: white;
+    padding: .3rem;
+    border-radius: .5rem;
+}
